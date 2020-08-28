@@ -26,7 +26,7 @@ export default function CompanyInfoScreen({navigation, route}) {
                     <Text style={styles.cuisineTypesTitle}>Cuisine Types:</Text>
                     <View style={styles.cuisineTypesList}>
                         {restaurant.CuisineTypes.map((cuisineType, i) =>
-                            <Text style={styles.cuisineTypeTitle}>
+                            <Text style={styles.cuisineTypeTitle} key={i}>
                                 {cuisineType.Name}{i < restaurant.CuisineTypes.length - 1 ? ", " : ""}
                             </Text>)
                         }
